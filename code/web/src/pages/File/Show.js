@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { connect } from 'dva';
-import Error from './Error';
 import RcViewer from '@hanyk/rc-viewer';
 import { Player } from 'video-react';
 import 'video-react/dist/video-react.css';
@@ -38,6 +37,9 @@ class Index extends Component {
   render() {
     const { api } = this.props;
     const media = api.mediaDetail;
+    if (media.title) {
+      document.title = media.title;
+    }
     let showViewer = '';
     if (media.file_ext !== undefined) {
       switch (media.file_ext.toLowerCase()) {
