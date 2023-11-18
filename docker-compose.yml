@@ -1,7 +1,7 @@
 version: "2"
 services:
   php_nginx:
-    image: registry.cn-shenzhen.aliyuncs.com/luler/linux_php_nginx:php7.3
+    image: registry.cn-shenzhen.aliyuncs.com/luler/linux_php_nginx:libreoffice
     restart: always
     privileged: true
     ports:
